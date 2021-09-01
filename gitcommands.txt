@@ -1,0 +1,322 @@
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1
+$ git init
+Initialized empty Git repository in C:/webdev/Lab1/.git/
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git add .
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git commit
+[master (root-commit) 7986145] First commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git -am 'typo resolved'
+unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git commit -am 'typo resolved'
+[master 8ee84e9] typo resolved
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git log
+commit 8ee84e9cc226244cef666d479c8119094fa05c09 (HEAD -> master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:32:42 2021 +0300
+
+    typo resolved
+
+commit 7986145936d1d601a620ae8ea3a3b46412962bbb
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:30:36 2021 +0300
+
+    First commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git --graph --oneline --all
+unknown option: --graph
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git show --graph --oneline --all
+fatal: cannot combine --no-walk with --graph
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git show
+commit 8ee84e9cc226244cef666d479c8119094fa05c09 (HEAD -> master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:32:42 2021 +0300
+
+    typo resolved
+
+diff --git a/index.html b/index.html
+index c94a30d..5ab6cc3 100644
+--- a/index.html
++++ b/index.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    <h1>HELLO world!</h1>
++    <h1>Hello world!</h1>
+ </body>
+ </html>
+\ No newline at end of file
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git log --graph
+* commit 8ee84e9cc226244cef666d479c8119094fa05c09 (HEAD -> master)
+| Author: Roman Mykolaichuk <mykroman@ukr.net>
+| Date:   Wed Sep 1 15:32:42 2021 +0300
+|
+|     typo resolved
+|
+* commit 7986145936d1d601a620ae8ea3a3b46412962bbb
+  Author: Roman Mykolaichuk <mykroman@ukr.net>
+  Date:   Wed Sep 1 15:30:36 2021 +0300
+
+      First commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git log --graph --oneline -all
+error: switch `l' expects a numerical value
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git log --graph --oneline
+* 8ee84e9 (HEAD -> master) typo resolved
+* 7986145 First commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git branch lab0
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git branch
+  lab0
+* master
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git checkout lab0
+Switched to branch 'lab0'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git status
+On branch lab0
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git commit -am 'lab0 first commit'
+[lab0 2af5b0f] lab0 first commit
+ 1 file changed, 1 insertion(+)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git status
+On branch lab0
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git checkout master
+Switched to branch 'master'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git checkout lab0
+Switched to branch 'lab0'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git checkout master
+Switched to branch 'master'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git commit -am 'h3 added'
+[master 473d948] h3 added
+ 1 file changed, 1 insertion(+)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (master)
+$ git checkout lab0
+Switched to branch 'lab0'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git merge master
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0|MERGING)
+$ git status
+On branch lab0
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0|MERGING)
+$ git commit -am 'merge with master'
+[lab0 b4c2aec] merge with master
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git status
+On branch lab0
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git log
+commit b4c2aecf0e2dac7102393e68ae36cc5c7dc95a8a (HEAD -> lab0)
+Merge: 2af5b0f 473d948
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:47:53 2021 +0300
+
+    merge with master
+
+commit 473d948adcc604785062ddde84cd2396b9518bad (master)
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:43:04 2021 +0300
+
+    h3 added
+
+commit 2af5b0f75fda228f07702ee3e5291f455753d45d
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:40:53 2021 +0300
+
+    lab0 first commit
+
+commit 8ee84e9cc226244cef666d479c8119094fa05c09
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:32:42 2021 +0300
+
+    typo resolved
+
+commit 7986145936d1d601a620ae8ea3a3b46412962bbb
+Author: Roman Mykolaichuk <mykroman@ukr.net>
+Date:   Wed Sep 1 15:30:36 2021 +0300
+
+    First commit
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git remote add origin https://github.com/RomanMykolaichuk/wd2021.git
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git push -u origin lab0
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (15/15), 1.32 KiB | 338.00 KiB/s, done.
+Total 15 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/RomanMykolaichuk/wd2021.git
+ * [new branch]      lab0 -> lab0
+Branch 'lab0' set up to track remote branch 'lab0' from 'origin'.
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git status
+On branch lab0
+Your branch is up to date with 'origin/lab0'.
+
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git diff origin
+fatal: ambiguous argument 'origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git diff
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 703 bytes | 63.00 KiB/s, done.
+From https://github.com/RomanMykolaichuk/wd2021
+   b4c2aec..dc09691  lab0       -> origin/lab0
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git status
+On branch lab0
+Your branch is behind 'origin/lab0' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$ git pull
+Updating b4c2aec..dc09691
+Fast-forward
+ index.html | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+38068@DESKTOP-SRPFKQ2 MINGW64 /c/webdev/Lab1 (lab0)
+$
