@@ -1,2 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #dfbcb9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url("/pxfuel2.71c7cd49.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  background: transparent;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+nav .logo {
+  letter-spacing: 0.25rem;
+  line-height: 1.3;
+}
+nav .logo::first-letter {
+  background-color: #8d463f;
+  padding: 0 1px 0 5px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+}
+nav li {
+  padding-right: 0.5rem;
+  font-size: 0.75rem;
+}
+nav li:last-child {
+  padding-right: 0;
+}
+nav a {
+  text-decoration: none;
+}
+
+.person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding-top: 3rem;
+}
+.person h2 {
+  margin-top: 2rem;
+}
+.person h3 {
+  margin: 2rem;
+}
+.person img {
+  margin: 0 auto;
+  display: block;
+  width: 30vw;
+  border: 2px solid #c07972;
+}
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
