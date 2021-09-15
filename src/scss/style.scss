@@ -5,16 +5,26 @@ $color60: hsl(5, 38%, 60%);
 $color80: hsl(5, 38%, 80%);
 $color100: hsl(5, 38%, 95%);
 
+$small-img-size: 80px;
+
+$small-font: 0.75rem;
+
+@mixin shadow {
+    box-shadow: 1px 1px 5px $color20;
+}
+
 * {
     margin: 0;
     padding: 0;
     color: $color80;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 section {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    height: 100vh;
 }
 
 .hero {
@@ -27,7 +37,6 @@ section {
 .container {
     margin: 0 auto;
     width: 80%;
-    background: transparent;
 }
 
 nav {
@@ -54,7 +63,7 @@ nav {
 
     li {
         padding-right: 0.5rem;
-        font-size: 0.75rem;
+        font-size: $small-font;
 
         &:last-child {
             padding-right: 0;
@@ -64,9 +73,6 @@ nav {
     a {
         text-decoration: none;
     }
-
-    
-    
 }
 
 .person {
@@ -76,17 +82,119 @@ nav {
     text-align: left;
     padding-top: 3rem;
 
-    h2{
+    h2 {
         margin-top: 2rem;
     }
-    h3{
+    h3 {
         margin: 2rem;
     }
 
     img {
-        margin: 0 auto;
         display: block;
         width: 30vw;
         border: 2px solid $color60;
+        justify-self: flex-end;
     }
 }
+
+.work {
+    text-align: center;
+    background-color: $color80;
+    padding-top: 3rem;
+
+    h2,
+    h4,
+    h5,
+    p {
+        color: $color20;
+    }
+
+    .card-container {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .card {
+            background-color: $color100;
+            margin: 1rem;
+            width: 100vw;
+            height: 40vh;
+            @include shadow;
+            position: relative;
+        }
+
+        img {
+            display: block;
+            @include shadow;
+            width: $small-img-size;
+            height: $small-img-size;
+            border-radius: 50%;
+            border: 2px solid $color100;
+            position: absolute;
+            top: -($small-img-size/2);
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h4 {
+            margin-top: 56px;
+        }
+
+        h5 {
+            font-style: italic;
+            margin: 0.25rem;
+        }
+        p {
+            font-size: $small-font;
+        }
+    }
+
+    @media only screen and (max-width: 768px){
+        .work{
+            height: auto;
+        }
+        .card-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .card{
+                width: 50vw;
+                height: auto;
+                margin: 3rem 0;
+            }
+        }
+    
+    }
+
+    .indicators {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        .line {
+            margin: 3px;
+            width: 25px;
+            height: 6px;
+            background-color: $color0;
+            @include shadow;
+        }
+
+        .active{
+            background-color: $color60;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    section{
+        height: auto;
+    }
+   
+}
+
+

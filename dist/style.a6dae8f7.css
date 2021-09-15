@@ -9,6 +9,7 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
 }
 
 .hero {
@@ -21,7 +22,6 @@ section {
 .container {
   margin: 0 auto;
   width: 80%;
-  background: transparent;
 }
 
 nav {
@@ -69,10 +69,98 @@ nav a {
   margin: 2rem;
 }
 .person img {
-  margin: 0 auto;
   display: block;
   width: 30vw;
   border: 2px solid #c07972;
+  justify-self: flex-end;
+}
+
+.work {
+  text-align: center;
+  background-color: #dfbcb9;
+  padding-top: 3rem;
+}
+.work h2,
+.work h4,
+.work h5,
+.work p {
+  color: #462320;
+}
+.work .card-container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.work .card-container .card {
+  background-color: #f7eeed;
+  margin: 1rem;
+  width: 100vw;
+  height: 40vh;
+  box-shadow: 1px 1px 5px #462320;
+  position: relative;
+}
+.work .card-container img {
+  display: block;
+  box-shadow: 1px 1px 5px #462320;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #f7eeed;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work .card-container h4 {
+  margin-top: 56px;
+}
+.work .card-container h5 {
+  font-style: italic;
+  margin: 0.25rem;
+}
+.work .card-container p {
+  font-size: 0.75rem;
+}
+@media only screen and (max-width: 768px) {
+  .work .work {
+    height: auto;
+  }
+  .work .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .work .card-container .card {
+    width: 50vw;
+    height: auto;
+    margin: 3rem 0;
+  }
+}
+.work .indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.work .indicators .line {
+  margin: 3px;
+  width: 25px;
+  height: 6px;
+  background-color: #120908;
+  box-shadow: 1px 1px 5px #462320;
+}
+.work .indicators .active {
+  background-color: #c07972;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    height: auto;
+  }
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
