@@ -13,10 +13,11 @@ section {
 }
 
 .hero {
-  height: 100vh;
   background-image: url("/pxfuel2.71c7cd49.jpg");
+  background-color: #dfbcb9;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -29,6 +30,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 2rem;
 }
 nav .logo {
   letter-spacing: 0.25rem;
@@ -57,22 +59,34 @@ nav a {
 
 .person {
   display: flex;
-  justify-content: center;
+  height: 60vh;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
-  padding-top: 3rem;
-}
-.person h2 {
-  margin-top: 2rem;
-}
-.person h3 {
-  margin: 2rem;
+  padding-top: clamp(6rem, 20vh, 7rem);
 }
 .person img {
   display: block;
-  width: 30vw;
+  width: clamp(300px, 35vw, 500px);
   border: 2px solid #c07972;
-  justify-self: flex-end;
+  align-self: flex-start;
+}
+.person .text-info {
+  padding-left: 2rem;
+  align-self: flex-end;
+  text-shadow: 1px 1px 2px #120908;
+}
+.person .text-info h2 {
+  margin-top: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h3 {
+  margin: 2rem;
+  mix-blend-mode: hard-light;
+}
+.person .text-info h1 {
+  mix-blend-mode: hard-light;
+  font-size: 2rem;
 }
 
 .work {
@@ -130,7 +144,6 @@ nav a {
     height: auto;
   }
   .work .card-container {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -160,6 +173,13 @@ nav a {
 @media only screen and (max-width: 768px) {
   section {
     height: auto;
+  }
+  section .person {
+    flex-direction: column;
+    padding-top: 0;
+    height: auto;
+    padding-bottom: 1rem;
+    text-align: right;
   }
 }
 
