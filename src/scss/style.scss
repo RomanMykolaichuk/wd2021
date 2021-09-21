@@ -1,0 +1,83 @@
+$c-main: blue;
+$b-main: lightgrey;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $c-main;
+}
+
+header,
+section {
+    max-width: 1200px;
+    background-color: $b-main;
+    margin: 0 auto;
+}
+
+header{
+    padding-top: 10px;
+    border-bottom: 2px solid $c-main;
+
+    h1{
+        display: block;
+    }
+
+
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.full-height {
+    min-height: 600px;
+    height: 100vh;
+}
+.header-height {
+    height: 6rem;
+}
+
+.flex {    
+    &-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $c-main;
+    border-radius: 10px;
+    padding: 10px;
+
+    img{
+        width: 180px;
+        height: 120px;
+        border-radius: .2rem;
+    }
+    h3,p{
+        padding: 0.5rem;
+    }
+
+    button{
+        background-color: $b-main;
+        color:$c-main;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid $c-main;
+    }
+}
