@@ -213,11 +213,50 @@ const p1 = document.getElementById('place1');
 
 
 
-    // Fetch API
 
-    fetch('data.json')
-    .then(r=> {return r.json()})
-    .then(r=>console.log(r));
+
+// Fetch API
+
+// fetch('data.json')
+// .then(r=> {return r.json()})
+// .then(r=>console.log(r));
+
+
+
+
+
+// Async await
+
+// const getList = async ()=>{}
+// console.log(getList())
+
+
+// const getList = async () => {
+//     let res = await fetch('data.json');
+//     res = await res.json();
+//     return res;
+// }
+
+
+// let outputList;
+
+// console.log(outputList);
+
+// getList().then(r=>outputList=r).then(r=>console.log(outputList));
+
+// (async ()=>{console.log(await getList())})();
+
+// console.log(outputList);
+
+
+
+
+
+
+
+
+
+
 
 
 

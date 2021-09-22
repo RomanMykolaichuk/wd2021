@@ -343,10 +343,22 @@ const p1 = document.getElementById('place1'); //Demo
 //     .then(r=>console.log("finished"))
 //     .catch(e => console.log(e));
 // Fetch API
-
-fetch('data.json').then(r => {
-  return r.json();
-}).then(r => console.log(r));
+// fetch('data.json')
+// .then(r=> {return r.json()})
+// .then(r=>console.log(r));
+// Async await
+// const getList = async ()=>{}
+// console.log(getList())
+// const getList = async () => {
+//     let res = await fetch('data.json');
+//     res = await res.json();
+//     return res;
+// }
+// let outputList;
+// console.log(outputList);
+// getList().then(r=>outputList=r).then(r=>console.log(outputList));
+// (async ()=>{console.log(await getList())})();
+// console.log(outputList);
 },{"../scss/style.scss":"scss/style.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
