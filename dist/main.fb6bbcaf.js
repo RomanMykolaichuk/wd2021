@@ -205,7 +205,7 @@ const p1 = document.getElementById('place1'); //Demo
 //HTTP request
 // const request = new XMLHttpRequest();
 // request.addEventListener('readystatechange',()=>{
-//     // console.log(request,request.readyState);
+//     console.log(request,request.readyState);
 //     if(request.readyState===4 && request.status === 200){
 //         console.log(JSON.parse(request.responseText));
 //     }
@@ -284,9 +284,9 @@ const p1 = document.getElementById('place1'); //Demo
 //         s('pr3 resolved')
 //     }
 // )
-// // Promise.race([pr1, pr2, pr3]).then((results) => {
-// //     console.log(results);
-// // }).catch((e) => { console.log(e) })
+// Promise.all([pr1, pr2, pr3]).then((results) => {
+//     console.log(results);
+// }).catch((e) => { console.log('error: ',e) })
 // // Async await 
 // async function doPromises() {
 //     let s1 = "";
@@ -387,7 +387,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54684" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64881" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

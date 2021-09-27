@@ -1,5 +1,4 @@
 import '../scss/style.scss'
-
 const p1 = document.getElementById('place1');
 
 
@@ -18,7 +17,7 @@ const p1 = document.getElementById('place1');
 
 // const request = new XMLHttpRequest();
 // request.addEventListener('readystatechange',()=>{
-//     // console.log(request,request.readyState);
+//     console.log(request,request.readyState);
 //     if(request.readyState===4 && request.status === 200){
 //         console.log(JSON.parse(request.responseText));
 //     }
@@ -133,9 +132,9 @@ const p1 = document.getElementById('place1');
 //     }
 // )
 
-// // Promise.race([pr1, pr2, pr3]).then((results) => {
-// //     console.log(results);
-// // }).catch((e) => { console.log(e) })
+// Promise.all([pr1, pr2, pr3]).then((results) => {
+//     console.log(results);
+// }).catch((e) => { console.log('error: ',e) })
 
 
 
