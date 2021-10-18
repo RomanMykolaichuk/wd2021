@@ -1,0 +1,22 @@
+{
+  "name": "lection-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanMykolaichuk/wd2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanMykolaichuk/wd2021/issues"
+  },
+  "homepage": "https://github.com/RomanMykolaichuk/wd2021#readme",
+  "dependencies": {
+    "axios": "^0.23.0"
+  }
+}
